@@ -31,8 +31,13 @@ public class odv57 {
         {
             for (int j = 0; j <=a ; j++)
             {
-                boolean es = i*i + j*j == a;
-                System.out.println(es);
+                int b = i*i + j*j ;
+                
+                if(a==b)
+                {
+                    System.out.println(" sayi = "+i*i+"^2 + "+j*j+"^2");
+                    
+                
                  
                 
                 
