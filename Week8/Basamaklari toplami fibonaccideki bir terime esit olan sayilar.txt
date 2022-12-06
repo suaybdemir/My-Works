@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author PC
  */
-public class Basamaklaritoplamifibonacciolantamsayilar {
+public class Fibonacci_prime_numbers_____ERROR_____ {
 
     /**
      * @param args the command line arguments
@@ -20,35 +20,43 @@ public class Basamaklaritoplamifibonacciolantamsayilar {
         // TODO code application logic here
         Scanner input = new Scanner(System.in);
         
-        // Basamklarındaki rakamlarin toplami herhhangi bir fibonacci sayisina esit olan sayilari yazdıran program .
+        /*Fibonacci sayilari 1 , 1 , 2 , 3 gibi artan dizi olup yazılacak terimden onceki iki sayinin toplamı bulunup o terime yazilir ve bu islem bu dongu ile ilerler.
+        Buna gore ; Fibonacci sayilarının asal olanlarını yazdıran program .
+        */
         
-        int  b = 0 ;
+        int a;
+      
         int c = 1 ;
-        int e  ;
-        int d = 1 ;
-        int f ;
+        int b = 0;
+        int d = 0 ;
         
         
-        for (int i = 1; i < 99; i++)//1 den 99 a kadar fibonacci terimi yazdir
+        do
         {
-            c += b ;//iki terim oncek sayilarin toplamini bul ve su anda olunan terime o sayiyi yazdirmis ol
-            b = c- b ;//bir sonraki terimin degerini almıs olur
+            System.out.println(" Please enter a term number for Fibonacci prime number and numbers  ");
+            a = input.nextInt(); 
+        }while(a<0);
+        
+        for (int i = 1 ; i < a; i++) {
             
             
-                for (int j = 1; j < 99; j++){//Fibonacci sayilarinin herhangi bir sayinin rakmalarının toplami seklinde yazilabilmesi icin bir for dongusune gir 
-                if(j==c && j<10)// Eger bu sayi tek basamakli ise ve bir i'ninci terimdeki fibonacci sayisina esit ise o sayiyi yazdir
+                b += c ;//kendinden onceki iki terimi toplar ve kendi terimine yazdirir
+                c = b - c ;//kendinden bir sonraki terimin degerini alır
+                
+                for (int j = 2 ; j < b; j++) {//Asal bolenleri yazdirabilmek icin donguye aldik
+                if(b%j ==0)// bolunemiyorsa donguyu bitir
                 {
-                    System.out.println(j);
+                    j = b ;
                 }
-                else if(j>=10 && j==c)// Eger bu sayi iki basamakli ise ve bir i'ninci terimdeki fibonacci sayisina esit ise o sayiyi yazdir
+                else if(j==b-1)//eger dongunun sonuna kadar gidebilmisse yazdir
                 {
-                    e = j%10 + j/10 ;//Birler ve onlar basamagındaki rakamlarin toplamini bul
-                    System.out.println(e);
+                    System.out.println(b);
                 }
+                
             }
-                
-                
         }
+        
+        
         
     }
     
